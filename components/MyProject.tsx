@@ -31,7 +31,7 @@ const MyProject = () => {
         }
       } catch (err) {
         console.error('Error fetching folder tree:', err);
-        setError(err.response?.data?.error || 'An unexpected error occurred.');
+        setError( 'An unexpected error occurred.');
       }
     };
     fetchFolderTree();

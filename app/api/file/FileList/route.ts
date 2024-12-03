@@ -36,7 +36,7 @@ export const POST = async (req: NextRequest) => {
 
         let current = tree;
 // @ts-ignore
-        parts.forEach((part, index) => {
+        parts.forEach((part:string, index:number) => {
           if (!current[part]) {
             current[part] =
               index === parts.length - 1
