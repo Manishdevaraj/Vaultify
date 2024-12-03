@@ -35,7 +35,7 @@ export const POST = async (req: NextRequest) => {
         const parts = relativePath.split('/').filter(Boolean);
 
         let current = tree;
-
+// @ts-ignore
         parts.forEach((part, index) => {
           if (!current[part]) {
             current[part] =
@@ -63,6 +63,7 @@ export const POST = async (req: NextRequest) => {
     return NextResponse.json({ success: true, tree, totalSize }, { status: 200 });
   } catch (error) {
     console.error('Error listing folder contents:', error);
+    // @ts-ignore
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 };
