@@ -19,6 +19,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { createAccount, signInUser } from '@/lib/actions/user.action';
 import OTPModal from './OTPModal';
+import { toast } from '@/hooks/use-toast';
+import { useRouter } from 'next/navigation';
+
+
 
  
 
@@ -40,6 +44,8 @@ function AuthForm({type}:{type:FormType}) {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [accountId, setAccountId] = useState(null);
+
+  const router=useRouter();
   
   const formSchema = authFormSchema(type);
 
@@ -64,6 +70,20 @@ function AuthForm({type}:{type:FormType}) {
               email:values.email
             }
           ) : await signInUser({email:values.email});
+
+          if(!user.accountId) {
+            console.log('helo');
+            toast({
+              description: (
+                <p className="body-2 text-white">
+                  <span className="font-semibold">User is not found
+                  </span>
+                </p>
+              ),
+              className: "error-toast",
+            });
+            router.push('/sign-up');
+          }
   
           setAccountId(user.accountId);
           
