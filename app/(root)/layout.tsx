@@ -16,7 +16,7 @@ const Layout = async({children}:{children:React.ReactNode}) => {
   const currentUser=await getCurrentUser();
 
   console.log("user is un rechable from db");
-  if(!currentUser) redirect('/sign-in');
+  // if(!currentUser) ;
   
   return currentUser&&(
      <main className="flex h-screen">
