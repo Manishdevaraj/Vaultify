@@ -37,7 +37,7 @@ const MobileNavigation = ({
 
   return (
     <header className="mobile-header">
-       <Link href="/" className="flex items-center gap-2">
+       <div className="flex items-center gap-2">
        
        <Image
          src="/assets/icons/logo-brand.svg"
@@ -46,7 +46,7 @@ const MobileNavigation = ({
          height={52}
        />
        <p className="line-clamp-2  text-clip text-2xl font-semibold text-slate-300 lg:block">Vaultify</p>
-     </Link>
+     </div>
 
       <Sheet >
         <SheetTrigger>
