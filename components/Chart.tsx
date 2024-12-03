@@ -95,7 +95,7 @@ export const Chart = ({ used = 0 }: { used: number }) => {
       <CardHeader className="chart-details">
         <CardTitle className="chart-title">Available Storage</CardTitle>
         <CardDescription className="chart-description">
-          {used ? convertFileSize(used) : "2GB"} / 1GB
+          {used ? convertFileSize(used) : "0GB"} / 1GB
         </CardDescription>
       </CardHeader>
     </Card>
