@@ -139,7 +139,7 @@ We ❤️ contributors! Follow these steps to contribute:
 ## 👨‍💻 Authors & Contributors
 
 -   **Manish D** - Developer & Visionary
--   Open for contributions! Check the [How to Contribute](#how-to-contribute) section.
+-   Open for contributions! Check the [How to Contribute](#🛠️-How-to-Contribute) section.
 
 ----------
 
