@@ -30,8 +30,6 @@ Follow the steps below to get Vaultify up and running locally.
 -   **Node.js** (v16+)
 -   **Git**
 -   **Vercel CLI** (optional, for deployment)
--   **Docker** (for managing isolated project containers)
-
 ### Installation
 
 1.  Clone the repository:
